@@ -1,0 +1,41 @@
+.demo-basic {
+    padding: 0;
+}
+.demo-basic .mat-card-content {
+    padding: 16px;
+}
+.demo-full-width {
+    width: 100%;
+}
+.demo-card {
+    margin: 16px;
+  
+    mat-card-content {
+      font-size: 16px;
+    }
+}
+.demo-text-align-end {
+    text-align: end;
+}
+.demo-textarea {
+    resize: none;
+    border: none;
+    overflow: auto;
+    padding: 0;
+    background: lightblue;
+}
+.rev-card-container {
+    display: block;
+}
+.rev-chart-container {
+    display: grid;
+    margin: 0;
+}
+.rev-chart {
+    width: 100% !important;
+    display: block !important;
+}
+.rev-action-bar {
+    padding-bottom: 0px;
+    padding-right: 11px;
+  }

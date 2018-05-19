@@ -1,0 +1,63 @@
+<mat-card class="demo-card demo-basic">
+    <mat-toolbar color="primary">
+        <mat-toolbar-row>
+          <span>Revenue Input</span>
+          <span class="delete-spacer"></span>
+          <mat-icon class="delete-icon" 
+                    (click)="clearStored()"
+                    matTooltip="Delete stored session data"
+                    [matTooltipPosition]="'left'">delete</mat-icon>
+        </mat-toolbar-row>
+      </mat-toolbar>
+  <mat-card-content>
+    <form name="revenueForm">
+        <div class="container-fluid remove-padding">
+            <div class="row">
+              <div class="col-md-6">
+                  <mat-form-field class="demo-full-width">
+                      <mat-label>Year</mat-label>
+                      <input matInput 
+                        [matDatepicker]="dp"  
+                        [formControl]="revDate"
+                        required>
+                      <mat-datepicker-toggle matSuffix [for]="dp"></mat-datepicker-toggle>
+                      <mat-datepicker #dp
+                                      startView="multi-year"
+                                      (yearSelected)="chosenYearHandler($event, dp)"
+                                      panelClass="example-month-picker">
+                      </mat-datepicker>
+                      <mat-error>Please enter/select a year</mat-error>
+                    </mat-form-field>
+              </div>
+              <div class="col-md-6">
+                  <mat-form-field class="demo-full-width">
+                      <mat-label>Revenue</mat-label>
+                      <input type="number" name="revAmt" matInput step="0.1"
+                        [formControl]="revAmt"
+                        required>
+                      <span matPrefix>$&nbsp;</span>
+                      <mat-error>Please enter dollar amount</mat-error>
+                    </mat-form-field>
+              </div>
+            </div>
+          </div>
+      <mat-card-actions class="rev-action-bar" align="end">
+          <button id="resetFieldsBtn" mat-button 
+                  (click)="resetFields()" 
+                  [disabled]="!revAmt.value && !revDate.value">Reset Fields</button>
+          <button id="addRevenuBtn" mat-raised-button 
+                  color="primary"
+                  type="button"
+                  [disabled]="revAmt.status === 'INVALID' || revDate.status === 'INVALID'"
+                  (click)="pushIt()">Add Revenue</button>
+          <button id="plotBtn" mat-raised-button 
+                  color="primary"
+                  type="button"
+                  matTooltip="Go to Revenue Chart"
+                  (click)="plotRev()">
+                    <mat-icon>timeline</mat-icon>
+          </button>
+        </mat-card-actions>
+    </form>
+  </mat-card-content>
+</mat-card>

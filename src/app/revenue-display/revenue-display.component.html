@@ -1,0 +1,13 @@
+<mat-card class="demo-card demo-basic">
+  <mat-toolbar color="primary">Revenue Chart</mat-toolbar>
+  <mat-card-content class="re-card-container">
+    <div class="rev-chart-container">
+        <chart class="rev-chart" 
+              [options]="options"
+              (load)="saveInstance($event.context)"></chart>
+    </div>
+    <mat-card-actions class="rev-action-bar" align="end">
+        <button mat-raised-button color="primary" routerLink="/revenue-input">Back to Input</button>
+      </mat-card-actions>
+  </mat-card-content>
+</mat-card>

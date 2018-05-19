@@ -1,0 +1,48 @@
+.demo-basic {
+  padding: 0;
+}
+
+.demo-basic .mat-card-content {
+  padding: 16px;
+}
+
+.demo-full-width {
+  width: 100%;
+}
+
+.demo-card {
+  margin: 16px;
+  mat-card-content {
+    font-size: 16px;
+  }
+}
+
+.demo-text-align-end {
+  text-align: end;
+}
+
+.demo-textarea {
+  resize: none;
+  border: none;
+  overflow: auto;
+  padding: 0;
+  background: lightblue;
+}
+
+.delete-icon {
+  padding: 0 14px;
+  cursor: pointer;
+}
+
+.delete-spacer {
+  flex: 1 1 auto;
+}
+
+.remove-padding {
+  padding: 0px;
+}
+
+.rev-action-bar {
+  padding-bottom: 0px;
+  padding-right: 11px;
+}
