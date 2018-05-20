@@ -1,27 +1,24 @@
-# AngWorkivaApp
+# Angular Workiva App
+Author: Christopher Phillips
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.3.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.3. 
+## Pages
+The app has 2 pages 
+1. `http://localhost:4200/revenue-input` - This is the data entry page containig 2 input boxs
+2. `http://localhost:4200/revenue-display` - This is the revenue chart display page. 
 
-## Development server
+## Data Storage
+This app stores all entered revenue in sessionStorage. I've provided an icon on the input page to delete all stored data if desired otherwise the data will be removed from the browser when the tab is closed.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Libraries Used
+1. Angular Material for the components:  `https://material.angular.io/`
+2. Bootstrap grid structure for responsiveness: `https://getbootstrap.com/`
+3. Highcharts to display the data: `https://www.highcharts.com/`
+4. Highcharts Angular wrapper: `https://github.com/gevgeny/angular2-highcharts`
 
-## Code scaffolding
+## Install dependencies
+Run `npm install`
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Running the application
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. This will automatically send you to the revenue input page by default
